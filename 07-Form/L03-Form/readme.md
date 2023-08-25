@@ -1,0 +1,7 @@
+-   ให้สร้าง form โดยใน form มี input สำหรับกรอกชื่อและนามสกุล
+-   มี input เป็น radio สำหรับเลือกเพศ
+-   มี select สำหรับเลือกเดือนเกิด และมี
+-   input เป็นไฟล์สำหรับเลือกรูป
+-   และมี button สำหรับ submit form
+-   ให้ prevent default action ของ form
+-   ให้จัดการ input ทุกตัวใน form ในรูปแบบ controlled component
