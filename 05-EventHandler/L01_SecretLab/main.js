@@ -1,5 +1,16 @@
+// -   เปิดไฟล์ index.html ด้วย Live Server จะเจอยุง
+// -   เมื่อผู้ใช้งานตบยุงตายให้ alert คำว่า Dead
+
+// Hint : onChange
+
+
 const Mosquito = () => {
     const [position, setPosition] = React.useState({ x: 0, y: 0 });
+
+    const handleClick = () => {
+        alert("Dead")
+    }
+
 
     React.useEffect(() => {
         const updatePosition = () => {
@@ -8,14 +19,16 @@ const Mosquito = () => {
             setPosition({ x: newX, y: newY });
             setIsDead(false);
         };
-        const interval = setInterval(updatePosition, 500);
+        const interval = setInterval(updatePosition, 5000);
         return () => {
             clearInterval(interval);
         };
     }, []);
 
+
     return (
         <img
+            onClick={handleClick}
             src='./mos.jpeg'
             style={{
                 position: 'absolute',
